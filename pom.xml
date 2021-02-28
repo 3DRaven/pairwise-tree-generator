@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.anyqn.lib</groupId>
 	<artifactId>pairwise-tree-generator</artifactId>
-	<version>0.0.1</version>
+	<version>0.0.2-SNAPSHOT</version>
 	<name>Pairwise tree generator</name>
 
 	<description>Generate tree variants of incoming objects description by
@@ -27,7 +27,7 @@
 	<scm>
 		<connection>scm:git:ssh://git@github.com:3DRaven/pairwise-tree-generator.git</connection>
 		<developerConnection>scm:git:ssh://git@github.com:3DRaven/pairwise-tree-generator.git</developerConnection>
-		<tag>pairwise-tree-generator-0.0.1</tag>
+		<tag>HEAD</tag>
 		<url>https://github.com/3DRaven/pairwise-tree-generator</url>
 	</scm>
 	<issueManagement>
