@@ -1,0 +1,4778 @@
+{
+    "testCases": [
+        {
+            "properties": {
+                "minRestrictions": [
+                ],
+                "maxRestrictions": [
+                ],
+                "objects": [
+                ]
+            },
+            "source": {
+                "fieldA": [
+                    "Avalue1",
+                    "Avalue2"
+                ],
+                "fieldB": [
+                    "Bvalue1",
+                    "Bvalue2"
+                ]
+            },
+            "expected": [
+                {
+                    "fieldA": "Avalue1",
+                    "fieldB": "Bvalue1"
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldB": "Bvalue2"
+                },
+                {
+                    "fieldA": "Avalue2",
+                    "fieldB": "Bvalue1"
+                },
+                {
+                    "fieldA": "Avalue2",
+                    "fieldB": "Bvalue2"
+                }
+            ]
+        },
+        {
+            "properties": {
+                "minRestrictions": [
+                    {
+                        "fieldPath": "fieldD",
+                        "value": 1
+                    }
+                ],
+                "maxRestrictions": [
+                    {
+                        "fieldPath": "fieldD",
+                        "value": 2
+                    }
+                ],
+                "objects": [
+                    "fieldC"
+                ]
+            },
+            "source": {
+                "fieldA": [
+                    "Avalue1"
+                ],
+                "fieldB": [
+                    null
+                ],
+                "fieldC": [
+                    {
+                        "subFieldA": [
+                            1
+                        ]
+                    }
+                ],
+                "fieldD": [
+                    {
+                        "subFieldA": [
+                            1
+                        ]
+                    }
+                ]
+            },
+            "expected": [
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldA": 1
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldA": 1
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "properties": {
+                "minRestrictions": [
+                    {
+                        "fieldPath": "fieldD",
+                        "value": 1
+                    }
+                ],
+                "maxRestrictions": [
+                    {
+                        "fieldPath": "fieldD",
+                        "value": 2
+                    }
+                ],
+                "objects": [
+                    "fieldC"
+                ]
+            },
+            "source": {
+                "fieldA": [
+                    "Avalue1"
+                ],
+                "fieldB": [
+                    null
+                ],
+                "fieldC": [
+                    {
+                        "subFieldA": [
+                            1
+                        ]
+                    }
+                ],
+                "fieldD": [
+                    {
+                        "subFieldA": [
+                            1,
+                            2,
+                            3
+                        ]
+                    }
+                ]
+            },
+            "expected": [
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldA": 1
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldA": 2
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldA": 3
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldA": 1
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldA": 2
+                        },
+                        {
+                            "subFieldA": 1
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldA": 3
+                        },
+                        {
+                            "subFieldA": 1
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldA": 1
+                        },
+                        {
+                            "subFieldA": 2
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldA": 3
+                        },
+                        {
+                            "subFieldA": 2
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldA": 1
+                        },
+                        {
+                            "subFieldA": 3
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldA": 2
+                        },
+                        {
+                            "subFieldA": 3
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldA": 3
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "properties": {
+                "minRestrictions": [
+                    {
+                        "fieldPath": "fieldD",
+                        "value": 1
+                    }
+                ],
+                "maxRestrictions": [
+                    {
+                        "fieldPath": "fieldD",
+                        "value": 2
+                    }
+                ],
+                "objects": [
+                    "fieldC"
+                ]
+            },
+            "source": {
+                "fieldA": [
+                    "Avalue1"
+                ],
+                "fieldB": [
+                    null
+                ],
+                "fieldC": [
+                    {
+                        "subFieldCA": [
+                            1
+                        ]
+                    }
+                ],
+                "fieldD": [
+                    {
+                        "subFieldDA": [
+                            {
+                                "subSubFieldDAA": [
+                                    1,
+                                    2,
+                                    3
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            "expected": [
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldCA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 1
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 2
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldCA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 3
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 1
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 2
+                                },
+                                {
+                                    "subSubFieldDAA": 1
+                                },
+                                {
+                                    "subSubFieldDAA": 3
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldCA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 3
+                                },
+                                {
+                                    "subSubFieldDAA": 1
+                                },
+                                {
+                                    "subSubFieldDAA": 2
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldCA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 1
+                                },
+                                {
+                                    "subSubFieldDAA": 2
+                                },
+                                {
+                                    "subSubFieldDAA": 3
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldCA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 3
+                                },
+                                {
+                                    "subSubFieldDAA": 2
+                                },
+                                {
+                                    "subSubFieldDAA": 1
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 3
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldCA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 1
+                                },
+                                {
+                                    "subSubFieldDAA": 3
+                                },
+                                {
+                                    "subSubFieldDAA": 2
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 2
+                                },
+                                {
+                                    "subSubFieldDAA": 3
+                                },
+                                {
+                                    "subSubFieldDAA": 1
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldCA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 1
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldCA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 2
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 3
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldCA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 1
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldCA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 2
+                                },
+                                {
+                                    "subSubFieldDAA": 1
+                                },
+                                {
+                                    "subSubFieldDAA": 3
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 3
+                                },
+                                {
+                                    "subSubFieldDAA": 1
+                                },
+                                {
+                                    "subSubFieldDAA": 2
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 1
+                                },
+                                {
+                                    "subSubFieldDAA": 2
+                                },
+                                {
+                                    "subSubFieldDAA": 3
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 3
+                                },
+                                {
+                                    "subSubFieldDAA": 2
+                                },
+                                {
+                                    "subSubFieldDAA": 1
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldCA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 3
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 1
+                                },
+                                {
+                                    "subSubFieldDAA": 3
+                                },
+                                {
+                                    "subSubFieldDAA": 2
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldCA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 2
+                                },
+                                {
+                                    "subSubFieldDAA": 3
+                                },
+                                {
+                                    "subSubFieldDAA": 1
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 1
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 2
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 1
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldCA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 3
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 1
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 1
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 1
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldCA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 1
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 1
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 2
+                                },
+                                {
+                                    "subSubFieldDAA": 1
+                                },
+                                {
+                                    "subSubFieldDAA": 3
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 1
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldCA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 3
+                                },
+                                {
+                                    "subSubFieldDAA": 1
+                                },
+                                {
+                                    "subSubFieldDAA": 2
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 1
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldCA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 1
+                                },
+                                {
+                                    "subSubFieldDAA": 2
+                                },
+                                {
+                                    "subSubFieldDAA": 3
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 1
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldCA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 3
+                                },
+                                {
+                                    "subSubFieldDAA": 2
+                                },
+                                {
+                                    "subSubFieldDAA": 1
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 1
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 3
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 1
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldCA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 1
+                                },
+                                {
+                                    "subSubFieldDAA": 3
+                                },
+                                {
+                                    "subSubFieldDAA": 2
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 1
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 2
+                                },
+                                {
+                                    "subSubFieldDAA": 3
+                                },
+                                {
+                                    "subSubFieldDAA": 1
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 1
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 2
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldCA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 1
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 2
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldCA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 3
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 2
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 1
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 2
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 2
+                                },
+                                {
+                                    "subSubFieldDAA": 1
+                                },
+                                {
+                                    "subSubFieldDAA": 3
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 2
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldCA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 3
+                                },
+                                {
+                                    "subSubFieldDAA": 1
+                                },
+                                {
+                                    "subSubFieldDAA": 2
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 2
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 2
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 2
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldCA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 1
+                                },
+                                {
+                                    "subSubFieldDAA": 2
+                                },
+                                {
+                                    "subSubFieldDAA": 3
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 2
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldCA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 3
+                                },
+                                {
+                                    "subSubFieldDAA": 2
+                                },
+                                {
+                                    "subSubFieldDAA": 1
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 2
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 3
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 2
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldCA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 1
+                                },
+                                {
+                                    "subSubFieldDAA": 3
+                                },
+                                {
+                                    "subSubFieldDAA": 2
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 2
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 2
+                                },
+                                {
+                                    "subSubFieldDAA": 3
+                                },
+                                {
+                                    "subSubFieldDAA": 1
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 2
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 3
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldCA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 1
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 3
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 2
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 3
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 1
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 3
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 2
+                                },
+                                {
+                                    "subSubFieldDAA": 1
+                                },
+                                {
+                                    "subSubFieldDAA": 3
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 3
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldCA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 3
+                                },
+                                {
+                                    "subSubFieldDAA": 1
+                                },
+                                {
+                                    "subSubFieldDAA": 2
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 3
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldCA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 1
+                                },
+                                {
+                                    "subSubFieldDAA": 2
+                                },
+                                {
+                                    "subSubFieldDAA": 3
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 3
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldCA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 3
+                                },
+                                {
+                                    "subSubFieldDAA": 2
+                                },
+                                {
+                                    "subSubFieldDAA": 1
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 3
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 3
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 3
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldCA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 1
+                                },
+                                {
+                                    "subSubFieldDAA": 3
+                                },
+                                {
+                                    "subSubFieldDAA": 2
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 3
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 2
+                                },
+                                {
+                                    "subSubFieldDAA": 3
+                                },
+                                {
+                                    "subSubFieldDAA": 1
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 3
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldCA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 3
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 3
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 2
+                                },
+                                {
+                                    "subSubFieldDAA": 1
+                                },
+                                {
+                                    "subSubFieldDAA": 3
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldCA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 1
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 2
+                                },
+                                {
+                                    "subSubFieldDAA": 1
+                                },
+                                {
+                                    "subSubFieldDAA": 3
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 2
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 2
+                                },
+                                {
+                                    "subSubFieldDAA": 1
+                                },
+                                {
+                                    "subSubFieldDAA": 3
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldCA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 3
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 2
+                                },
+                                {
+                                    "subSubFieldDAA": 1
+                                },
+                                {
+                                    "subSubFieldDAA": 3
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 1
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 2
+                                },
+                                {
+                                    "subSubFieldDAA": 1
+                                },
+                                {
+                                    "subSubFieldDAA": 3
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldCA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 3
+                                },
+                                {
+                                    "subSubFieldDAA": 1
+                                },
+                                {
+                                    "subSubFieldDAA": 2
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 2
+                                },
+                                {
+                                    "subSubFieldDAA": 1
+                                },
+                                {
+                                    "subSubFieldDAA": 3
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldCA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 1
+                                },
+                                {
+                                    "subSubFieldDAA": 2
+                                },
+                                {
+                                    "subSubFieldDAA": 3
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 2
+                                },
+                                {
+                                    "subSubFieldDAA": 1
+                                },
+                                {
+                                    "subSubFieldDAA": 3
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldCA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 3
+                                },
+                                {
+                                    "subSubFieldDAA": 2
+                                },
+                                {
+                                    "subSubFieldDAA": 1
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 2
+                                },
+                                {
+                                    "subSubFieldDAA": 1
+                                },
+                                {
+                                    "subSubFieldDAA": 3
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 3
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 2
+                                },
+                                {
+                                    "subSubFieldDAA": 1
+                                },
+                                {
+                                    "subSubFieldDAA": 3
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldCA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 1
+                                },
+                                {
+                                    "subSubFieldDAA": 3
+                                },
+                                {
+                                    "subSubFieldDAA": 2
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 2
+                                },
+                                {
+                                    "subSubFieldDAA": 1
+                                },
+                                {
+                                    "subSubFieldDAA": 3
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 2
+                                },
+                                {
+                                    "subSubFieldDAA": 3
+                                },
+                                {
+                                    "subSubFieldDAA": 1
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 2
+                                },
+                                {
+                                    "subSubFieldDAA": 1
+                                },
+                                {
+                                    "subSubFieldDAA": 3
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 3
+                                },
+                                {
+                                    "subSubFieldDAA": 1
+                                },
+                                {
+                                    "subSubFieldDAA": 2
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldCA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 1
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 3
+                                },
+                                {
+                                    "subSubFieldDAA": 1
+                                },
+                                {
+                                    "subSubFieldDAA": 2
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 2
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 3
+                                },
+                                {
+                                    "subSubFieldDAA": 1
+                                },
+                                {
+                                    "subSubFieldDAA": 2
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldCA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 3
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 3
+                                },
+                                {
+                                    "subSubFieldDAA": 1
+                                },
+                                {
+                                    "subSubFieldDAA": 2
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 1
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 3
+                                },
+                                {
+                                    "subSubFieldDAA": 1
+                                },
+                                {
+                                    "subSubFieldDAA": 2
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 2
+                                },
+                                {
+                                    "subSubFieldDAA": 1
+                                },
+                                {
+                                    "subSubFieldDAA": 3
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 3
+                                },
+                                {
+                                    "subSubFieldDAA": 1
+                                },
+                                {
+                                    "subSubFieldDAA": 2
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldCA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 1
+                                },
+                                {
+                                    "subSubFieldDAA": 2
+                                },
+                                {
+                                    "subSubFieldDAA": 3
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 3
+                                },
+                                {
+                                    "subSubFieldDAA": 1
+                                },
+                                {
+                                    "subSubFieldDAA": 2
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldCA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 3
+                                },
+                                {
+                                    "subSubFieldDAA": 2
+                                },
+                                {
+                                    "subSubFieldDAA": 1
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 3
+                                },
+                                {
+                                    "subSubFieldDAA": 1
+                                },
+                                {
+                                    "subSubFieldDAA": 2
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 3
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 3
+                                },
+                                {
+                                    "subSubFieldDAA": 1
+                                },
+                                {
+                                    "subSubFieldDAA": 2
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldCA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 1
+                                },
+                                {
+                                    "subSubFieldDAA": 3
+                                },
+                                {
+                                    "subSubFieldDAA": 2
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 3
+                                },
+                                {
+                                    "subSubFieldDAA": 1
+                                },
+                                {
+                                    "subSubFieldDAA": 2
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 2
+                                },
+                                {
+                                    "subSubFieldDAA": 3
+                                },
+                                {
+                                    "subSubFieldDAA": 1
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 3
+                                },
+                                {
+                                    "subSubFieldDAA": 1
+                                },
+                                {
+                                    "subSubFieldDAA": 2
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 1
+                                },
+                                {
+                                    "subSubFieldDAA": 2
+                                },
+                                {
+                                    "subSubFieldDAA": 3
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldCA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 1
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 1
+                                },
+                                {
+                                    "subSubFieldDAA": 2
+                                },
+                                {
+                                    "subSubFieldDAA": 3
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 2
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 1
+                                },
+                                {
+                                    "subSubFieldDAA": 2
+                                },
+                                {
+                                    "subSubFieldDAA": 3
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldCA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 3
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 1
+                                },
+                                {
+                                    "subSubFieldDAA": 2
+                                },
+                                {
+                                    "subSubFieldDAA": 3
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 1
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 1
+                                },
+                                {
+                                    "subSubFieldDAA": 2
+                                },
+                                {
+                                    "subSubFieldDAA": 3
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 2
+                                },
+                                {
+                                    "subSubFieldDAA": 1
+                                },
+                                {
+                                    "subSubFieldDAA": 3
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 1
+                                },
+                                {
+                                    "subSubFieldDAA": 2
+                                },
+                                {
+                                    "subSubFieldDAA": 3
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldCA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 3
+                                },
+                                {
+                                    "subSubFieldDAA": 1
+                                },
+                                {
+                                    "subSubFieldDAA": 2
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 1
+                                },
+                                {
+                                    "subSubFieldDAA": 2
+                                },
+                                {
+                                    "subSubFieldDAA": 3
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldCA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 3
+                                },
+                                {
+                                    "subSubFieldDAA": 2
+                                },
+                                {
+                                    "subSubFieldDAA": 1
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 1
+                                },
+                                {
+                                    "subSubFieldDAA": 2
+                                },
+                                {
+                                    "subSubFieldDAA": 3
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 3
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 1
+                                },
+                                {
+                                    "subSubFieldDAA": 2
+                                },
+                                {
+                                    "subSubFieldDAA": 3
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldCA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 1
+                                },
+                                {
+                                    "subSubFieldDAA": 3
+                                },
+                                {
+                                    "subSubFieldDAA": 2
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 1
+                                },
+                                {
+                                    "subSubFieldDAA": 2
+                                },
+                                {
+                                    "subSubFieldDAA": 3
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 2
+                                },
+                                {
+                                    "subSubFieldDAA": 3
+                                },
+                                {
+                                    "subSubFieldDAA": 1
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 1
+                                },
+                                {
+                                    "subSubFieldDAA": 2
+                                },
+                                {
+                                    "subSubFieldDAA": 3
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 3
+                                },
+                                {
+                                    "subSubFieldDAA": 2
+                                },
+                                {
+                                    "subSubFieldDAA": 1
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldCA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 1
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 3
+                                },
+                                {
+                                    "subSubFieldDAA": 2
+                                },
+                                {
+                                    "subSubFieldDAA": 1
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 2
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 3
+                                },
+                                {
+                                    "subSubFieldDAA": 2
+                                },
+                                {
+                                    "subSubFieldDAA": 1
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldCA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 3
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 3
+                                },
+                                {
+                                    "subSubFieldDAA": 2
+                                },
+                                {
+                                    "subSubFieldDAA": 1
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 1
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 3
+                                },
+                                {
+                                    "subSubFieldDAA": 2
+                                },
+                                {
+                                    "subSubFieldDAA": 1
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 2
+                                },
+                                {
+                                    "subSubFieldDAA": 1
+                                },
+                                {
+                                    "subSubFieldDAA": 3
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 3
+                                },
+                                {
+                                    "subSubFieldDAA": 2
+                                },
+                                {
+                                    "subSubFieldDAA": 1
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldCA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 3
+                                },
+                                {
+                                    "subSubFieldDAA": 1
+                                },
+                                {
+                                    "subSubFieldDAA": 2
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 3
+                                },
+                                {
+                                    "subSubFieldDAA": 2
+                                },
+                                {
+                                    "subSubFieldDAA": 1
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldCA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 1
+                                },
+                                {
+                                    "subSubFieldDAA": 2
+                                },
+                                {
+                                    "subSubFieldDAA": 3
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 3
+                                },
+                                {
+                                    "subSubFieldDAA": 2
+                                },
+                                {
+                                    "subSubFieldDAA": 1
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 3
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 3
+                                },
+                                {
+                                    "subSubFieldDAA": 2
+                                },
+                                {
+                                    "subSubFieldDAA": 1
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldCA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 1
+                                },
+                                {
+                                    "subSubFieldDAA": 3
+                                },
+                                {
+                                    "subSubFieldDAA": 2
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 3
+                                },
+                                {
+                                    "subSubFieldDAA": 2
+                                },
+                                {
+                                    "subSubFieldDAA": 1
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 2
+                                },
+                                {
+                                    "subSubFieldDAA": 3
+                                },
+                                {
+                                    "subSubFieldDAA": 1
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 3
+                                },
+                                {
+                                    "subSubFieldDAA": 2
+                                },
+                                {
+                                    "subSubFieldDAA": 1
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 1
+                                },
+                                {
+                                    "subSubFieldDAA": 3
+                                },
+                                {
+                                    "subSubFieldDAA": 2
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldCA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 1
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 1
+                                },
+                                {
+                                    "subSubFieldDAA": 3
+                                },
+                                {
+                                    "subSubFieldDAA": 2
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 2
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 1
+                                },
+                                {
+                                    "subSubFieldDAA": 3
+                                },
+                                {
+                                    "subSubFieldDAA": 2
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldCA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 3
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 1
+                                },
+                                {
+                                    "subSubFieldDAA": 3
+                                },
+                                {
+                                    "subSubFieldDAA": 2
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 1
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 1
+                                },
+                                {
+                                    "subSubFieldDAA": 3
+                                },
+                                {
+                                    "subSubFieldDAA": 2
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 2
+                                },
+                                {
+                                    "subSubFieldDAA": 1
+                                },
+                                {
+                                    "subSubFieldDAA": 3
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 1
+                                },
+                                {
+                                    "subSubFieldDAA": 3
+                                },
+                                {
+                                    "subSubFieldDAA": 2
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldCA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 3
+                                },
+                                {
+                                    "subSubFieldDAA": 1
+                                },
+                                {
+                                    "subSubFieldDAA": 2
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 1
+                                },
+                                {
+                                    "subSubFieldDAA": 3
+                                },
+                                {
+                                    "subSubFieldDAA": 2
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldCA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 1
+                                },
+                                {
+                                    "subSubFieldDAA": 2
+                                },
+                                {
+                                    "subSubFieldDAA": 3
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 1
+                                },
+                                {
+                                    "subSubFieldDAA": 3
+                                },
+                                {
+                                    "subSubFieldDAA": 2
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldCA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 3
+                                },
+                                {
+                                    "subSubFieldDAA": 2
+                                },
+                                {
+                                    "subSubFieldDAA": 1
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 1
+                                },
+                                {
+                                    "subSubFieldDAA": 3
+                                },
+                                {
+                                    "subSubFieldDAA": 2
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 3
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 1
+                                },
+                                {
+                                    "subSubFieldDAA": 3
+                                },
+                                {
+                                    "subSubFieldDAA": 2
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 2
+                                },
+                                {
+                                    "subSubFieldDAA": 3
+                                },
+                                {
+                                    "subSubFieldDAA": 1
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 1
+                                },
+                                {
+                                    "subSubFieldDAA": 3
+                                },
+                                {
+                                    "subSubFieldDAA": 2
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 2
+                                },
+                                {
+                                    "subSubFieldDAA": 3
+                                },
+                                {
+                                    "subSubFieldDAA": 1
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldCA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 1
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 2
+                                },
+                                {
+                                    "subSubFieldDAA": 3
+                                },
+                                {
+                                    "subSubFieldDAA": 1
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 2
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 2
+                                },
+                                {
+                                    "subSubFieldDAA": 3
+                                },
+                                {
+                                    "subSubFieldDAA": 1
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldCA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 3
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 2
+                                },
+                                {
+                                    "subSubFieldDAA": 3
+                                },
+                                {
+                                    "subSubFieldDAA": 1
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 1
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 2
+                                },
+                                {
+                                    "subSubFieldDAA": 3
+                                },
+                                {
+                                    "subSubFieldDAA": 1
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 2
+                                },
+                                {
+                                    "subSubFieldDAA": 1
+                                },
+                                {
+                                    "subSubFieldDAA": 3
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 2
+                                },
+                                {
+                                    "subSubFieldDAA": 3
+                                },
+                                {
+                                    "subSubFieldDAA": 1
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldCA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 3
+                                },
+                                {
+                                    "subSubFieldDAA": 1
+                                },
+                                {
+                                    "subSubFieldDAA": 2
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 2
+                                },
+                                {
+                                    "subSubFieldDAA": 3
+                                },
+                                {
+                                    "subSubFieldDAA": 1
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldCA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 1
+                                },
+                                {
+                                    "subSubFieldDAA": 2
+                                },
+                                {
+                                    "subSubFieldDAA": 3
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 2
+                                },
+                                {
+                                    "subSubFieldDAA": 3
+                                },
+                                {
+                                    "subSubFieldDAA": 1
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldCA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 3
+                                },
+                                {
+                                    "subSubFieldDAA": 2
+                                },
+                                {
+                                    "subSubFieldDAA": 1
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 2
+                                },
+                                {
+                                    "subSubFieldDAA": 3
+                                },
+                                {
+                                    "subSubFieldDAA": 1
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 3
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 2
+                                },
+                                {
+                                    "subSubFieldDAA": 3
+                                },
+                                {
+                                    "subSubFieldDAA": 1
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldCA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 1
+                                },
+                                {
+                                    "subSubFieldDAA": 3
+                                },
+                                {
+                                    "subSubFieldDAA": 2
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": 2
+                                },
+                                {
+                                    "subSubFieldDAA": 3
+                                },
+                                {
+                                    "subSubFieldDAA": 1
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "properties": {
+                "minRestrictions": [
+                    {
+                        "fieldPath": "fieldD",
+                        "value": 1
+                    }
+                ],
+                "maxRestrictions": [
+                    {
+                        "fieldPath": "fieldD",
+                        "value": 2
+                    }
+                ],
+                "objects": [
+                    "fieldC"
+                ]
+            },
+            "source": {
+                "fieldA": [
+                    "Avalue1"
+                ],
+                "fieldB": [
+                    null
+                ],
+                "fieldC": [
+                    {
+                        "subFieldCA": [
+                            1
+                        ]
+                    }
+                ],
+                "fieldD": [
+                    {
+                        "subFieldDA": [
+                            {
+                                "subSubFieldDAA": [
+                                    {
+                                        "subSubFieldDAAA": [
+                                            1
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            "expected": [
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldCA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": [
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": [
+                                        {
+                                            "subSubFieldDAAA": 1
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": [
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldCA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": [
+                                        {
+                                            "subSubFieldDAAA": 1
+                                        }
+                                    ]
+                                },
+                                {
+                                    "subSubFieldDAA": [
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldCA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": [
+                                    ]
+                                },
+                                {
+                                    "subSubFieldDAA": [
+                                        {
+                                            "subSubFieldDAAA": 1
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldCA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": [
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldCA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": [
+                                        {
+                                            "subSubFieldDAAA": 1
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldCA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": [
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": [
+                                        {
+                                            "subSubFieldDAAA": 1
+                                        }
+                                    ]
+                                },
+                                {
+                                    "subSubFieldDAA": [
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": [
+                                    ]
+                                },
+                                {
+                                    "subSubFieldDAA": [
+                                        {
+                                            "subSubFieldDAAA": 1
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": [
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": [
+                                        {
+                                            "subSubFieldDAAA": 1
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": [
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldCA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": [
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": [
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": [
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": [
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldCA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": [
+                                        {
+                                            "subSubFieldDAAA": 1
+                                        }
+                                    ]
+                                },
+                                {
+                                    "subSubFieldDAA": [
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": [
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldCA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": [
+                                    ]
+                                },
+                                {
+                                    "subSubFieldDAA": [
+                                        {
+                                            "subSubFieldDAAA": 1
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": [
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldCA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": [
+                                        {
+                                            "subSubFieldDAAA": 1
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": [
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": [
+                                        {
+                                            "subSubFieldDAAA": 1
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldCA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": [
+                                        {
+                                            "subSubFieldDAAA": 1
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldCA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": [
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": [
+                                        {
+                                            "subSubFieldDAAA": 1
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": [
+                                        {
+                                            "subSubFieldDAAA": 1
+                                        }
+                                    ]
+                                },
+                                {
+                                    "subSubFieldDAA": [
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": [
+                                        {
+                                            "subSubFieldDAAA": 1
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldCA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": [
+                                        {
+                                            "subSubFieldDAAA": 1
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": [
+                                        {
+                                            "subSubFieldDAAA": 1
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": [
+                                    ]
+                                },
+                                {
+                                    "subSubFieldDAA": [
+                                        {
+                                            "subSubFieldDAAA": 1
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": [
+                                        {
+                                            "subSubFieldDAAA": 1
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldCA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": [
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldCA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": [
+                                        {
+                                            "subSubFieldDAAA": 1
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": [
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": [
+                                        {
+                                            "subSubFieldDAAA": 1
+                                        }
+                                    ]
+                                },
+                                {
+                                    "subSubFieldDAA": [
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": [
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": [
+                                    ]
+                                },
+                                {
+                                    "subSubFieldDAA": [
+                                        {
+                                            "subSubFieldDAAA": 1
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": [
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": [
+                                        {
+                                            "subSubFieldDAAA": 1
+                                        }
+                                    ]
+                                },
+                                {
+                                    "subSubFieldDAA": [
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldCA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": [
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": [
+                                        {
+                                            "subSubFieldDAAA": 1
+                                        }
+                                    ]
+                                },
+                                {
+                                    "subSubFieldDAA": [
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": [
+                                        {
+                                            "subSubFieldDAAA": 1
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": [
+                                        {
+                                            "subSubFieldDAAA": 1
+                                        }
+                                    ]
+                                },
+                                {
+                                    "subSubFieldDAA": [
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": [
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": [
+                                        {
+                                            "subSubFieldDAAA": 1
+                                        }
+                                    ]
+                                },
+                                {
+                                    "subSubFieldDAA": [
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldCA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": [
+                                    ]
+                                },
+                                {
+                                    "subSubFieldDAA": [
+                                        {
+                                            "subSubFieldDAAA": 1
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": [
+                                        {
+                                            "subSubFieldDAAA": 1
+                                        }
+                                    ]
+                                },
+                                {
+                                    "subSubFieldDAA": [
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": [
+                                    ]
+                                },
+                                {
+                                    "subSubFieldDAA": [
+                                        {
+                                            "subSubFieldDAAA": 1
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldCA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": [
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": [
+                                    ]
+                                },
+                                {
+                                    "subSubFieldDAA": [
+                                        {
+                                            "subSubFieldDAAA": 1
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": [
+                                        {
+                                            "subSubFieldDAAA": 1
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": [
+                                    ]
+                                },
+                                {
+                                    "subSubFieldDAA": [
+                                        {
+                                            "subSubFieldDAAA": 1
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": null,
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": [
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": [
+                                    ]
+                                },
+                                {
+                                    "subSubFieldDAA": [
+                                        {
+                                            "subSubFieldDAAA": 1
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "fieldA": "Avalue1",
+                    "fieldC": {
+                        "subFieldCA": 1
+                    },
+                    "fieldB": null,
+                    "fieldD": [
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": [
+                                        {
+                                            "subSubFieldDAAA": 1
+                                        }
+                                    ]
+                                },
+                                {
+                                    "subSubFieldDAA": [
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "subFieldDA": [
+                                {
+                                    "subSubFieldDAA": [
+                                    ]
+                                },
+                                {
+                                    "subSubFieldDAA": [
+                                        {
+                                            "subSubFieldDAAA": 1
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
