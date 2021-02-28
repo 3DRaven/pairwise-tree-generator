@@ -53,6 +53,14 @@ We can describe field names and possible field values (objects can be values too
 
 Let's get generated JSONs variants from description:
 
+```
+<dependency>
+    <groupId>com.anyqn.lib</groupId>
+    <artifactId>pairwise-tree-generator</artifactId>
+    <version>0.0.1</version>
+</dependency>
+```
+
 ```java
 //Get description Map
 Map<String,Object> generationDescription = mapper.readValue(sourceDescriptionJson,new TypeReference<Map<String,Object>>() {});
